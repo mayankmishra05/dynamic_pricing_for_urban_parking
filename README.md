@@ -40,10 +40,8 @@ This model factors in nearby parking lots using their lat-long positions and adj
 
 | File | Description |
 |------|-------------|
-| `final-project.ipynb` | Main notebook with all models & Bokeh plots |
-| `final-project.csv` | Raw dataset simulating real-time parking data |
-| `model1_output_stream.jsonl` | Output of Model 1 (streamed via Pathway) |
-| `model2_output_stream.jsonl` | Output of Model 2 (streamed via Pathway) |
+| `dynamic_pricing_for_urban_parking.ipynb` | Main notebook with all models & Bokeh plots |
+| `dynamic_pricing_for_urban_parking.csv` | Raw dataset simulating real-time parking data |
 | `requirements.txt` | All packages used in the project |
 | `README.md` | You’re reading it 🙂 |
 
@@ -69,8 +67,8 @@ All visualizations were made using Bokeh:
 
 ##  How to Run
 
-1. Open `final-project.ipynb` in Google Colab
-2. Upload `final-project.csv`
+1. Open `dynamic_pricing_for_urban_parking.ipynb` in Google Colab
+2. Upload `dynamic_pricing_for_urban_parking.csv`
 3. Install required packages:
 
 ```python
@@ -81,7 +79,7 @@ All visualizations were made using Bokeh:
 
 ##  Architecture Flow
 flowchart TD
-    A[📁 final-project.csv\nInput Data] --> B[ Pathway\nStreaming Ingestion]
+    A[📁 dynamic_pricing_for urban_parking.csv\nInput Data] --> B[ Pathway\nStreaming Ingestion]
     B --> C1[ Model 1 Logic\nLinear Pricing UDF]
     B --> C2[ Model 2 Logic\nDemand-Based UDF]
     C1 --> D1[ model1_output_stream.jsonl]
